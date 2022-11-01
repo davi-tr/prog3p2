@@ -27,5 +27,13 @@ public class Dao<E> {
         em.getTransaction().begin();
         em.persist(entidade);
         em.getTransaction().commit();
+    } 
+    
+    public void apagar(E entidade){
+        em.getTransaction().begin();
+        em.remove(entidade);
+        em.getTransaction().commit();
     }
+
+
 }
