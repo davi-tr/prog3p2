@@ -1,7 +1,7 @@
 # Programação 3 (Segunda Metade)
-## Este repositorio contem o conteudo dado na segunda parte do semestre da disciplina de PROG 3.
+### Este repositorio contem o conteudo dado na segunda parte do semestre da disciplina de PROG 3.
 
-### Tecnologias utilizadas:
+#### Tecnologias utilizadas:
 
 <div style="display: inline_block">
 <a href="https://jdk.java.net/11/"> <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"/> </a>
