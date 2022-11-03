@@ -43,6 +43,9 @@ public class FXMLController implements Initializable {
     @FXML
     private Button BtnExcluir;
 
+    @FXML
+    private Button refreshButton;
+
     private DaoCLiente dao = new DaoCLiente();
     private Cliente cliente;
     private Boolean incluindo;
@@ -92,7 +95,11 @@ public class FXMLController implements Initializable {
         preencherLista();
         BtnExcluir.setStyle(null);
     }
-    
+
+    @FXML
+    private void recarregar_click(ActionEvent event) {
+        preencherLista();
+    }
     @FXML
     private void keyPressed_teclaSelecionada(KeyEvent event){
         exibirDados();
