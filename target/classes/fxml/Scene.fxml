@@ -10,14 +10,16 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.FXMLController">
    <children>
-      <ListView fx:id="LstClientes" layoutX="14.0" layoutY="30.0" prefHeight="320.0" prefWidth="200.0" />
-      <Label layoutX="256.0" layoutY="30.0" text="Nome" />
-      <TextField fx:id="TxtNome" layoutX="319.0" layoutY="26.0" />
-      <TextField fx:id="TxtEndereco" layoutX="319.0" layoutY="60.0" />
-      <Label layoutX="256.0" layoutY="64.0" text="Endereço" />
-      <Button layoutX="416.0" layoutY="103.0" mnemonicParsing="false" onAction="#Gravar_Click" text="Salvar" />
+      <ListView fx:id="LstClientes" layoutX="14.0" layoutY="14.0" onKeyPressed="#keyPressed_teclaSelecionada" onMouseClicked="#valor_Selecionado" prefHeight="320.0" prefWidth="200.0" />
+      <Label layoutX="351.0" layoutY="18.0" text="Nome" />
+      <TextField fx:id="TxtNome" disable="true" layoutX="407.0" layoutY="14.0" />
+      <TextField fx:id="TxtEndereco" disable="true" layoutX="407.0" layoutY="48.0" />
+      <Label layoutX="351.0" layoutY="52.0" text="Endereço" />
+      <Button fx:id="BtnSalvar" disable="true" layoutX="508.0" layoutY="90.0" mnemonicParsing="false" onAction="#Gravar_Click" text="Salvar" />
+      <Button fx:id="BtnIncluir" layoutX="15.0" layoutY="361.0" mnemonicParsing="false" onAction="#incluir_click" text="Incluir" />
+      <Button fx:id="BtnAlterar" layoutX="88.0" layoutY="361.0" mnemonicParsing="false" onAction="#altera_click" text="Alterar" />
+      <Button fx:id="BtnExcluir" layoutX="162.0" layoutY="361.0" mnemonicParsing="false" onAction="#excluir_click" text="Exluir" />
    </children>
 </Pane>

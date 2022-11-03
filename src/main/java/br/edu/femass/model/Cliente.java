@@ -33,4 +33,20 @@ public class Cliente {
         return id;
     }
 
+    
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return this.nome;
+    }
+
 }
