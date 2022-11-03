@@ -18,6 +18,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 
 public class FXMLController implements Initializable {
     
@@ -59,12 +60,17 @@ public class FXMLController implements Initializable {
 
         preencherLista();
         editar(false);
+        BtnIncluir.setStyle(null);
+        BtnAlterar.setStyle(null);
+        BtnExcluir.setStyle(null);
     }
     
     @FXML
     private void altera_click(ActionEvent event) {
         editar(true);
         incluindo = true;
+        BtnAlterar.setStyle("-fx-background-color: Yellow");
+        BtnExcluir.setStyle(null);
     }
 
     @FXML
@@ -75,12 +81,16 @@ public class FXMLController implements Initializable {
         TxtEndereco.setText("");
         TxtNome.setText("");
         TxtNome.requestFocus();
+        BtnIncluir.setStyle("-fx-background-color: MediumSeaGreen");
+        BtnExcluir.setStyle(null);
+
     }
 
     @FXML
     private void excluir_click(ActionEvent event) {
         dao.apagar(cliente);
         preencherLista();
+        BtnExcluir.setStyle(null);
     }
     
     @FXML
@@ -105,8 +115,11 @@ public class FXMLController implements Initializable {
     
     private void exibirDados(){
         this.cliente =  LstClientes.getSelectionModel().getSelectedItem();
-        if(cliente == null) return;
-
+        if(cliente == null){
+        BtnExcluir.setStyle(null);
+        return;
+        }
+        BtnExcluir.setStyle("-fx-background-color: Red");
         TxtNome.setText(cliente.getNome());
         TxtEndereco.setText(cliente.getEndereco());
     }
