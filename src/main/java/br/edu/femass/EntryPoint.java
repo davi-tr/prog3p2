@@ -18,7 +18,7 @@ public class EntryPoint extends Application {
         scene.getStylesheets().add("/styles/Styles.css");
         scene.getRoot().setStyle("-fx-font-family: 'serif'");
 
-        stage.setTitle("JavaFX and Maven");
+        stage.setTitle("CRUD");
         stage.setScene(scene);
         stage.show();
     }
